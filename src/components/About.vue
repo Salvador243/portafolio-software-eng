@@ -26,7 +26,7 @@ const { t } = useI18n()
 
         <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="text-center p-6 bg-gray-50 rounded-lg">
-            <div class="text-3xl font-bold text-gray-900 mb-2">3+</div>
+            <div class="text-3xl font-bold text-gray-900 mb-2">5+</div>
             <div class="text-gray-600">{{ t('about.yearsExperience') }}</div>
           </div>
           <div class="text-center p-6 bg-gray-50 rounded-lg">

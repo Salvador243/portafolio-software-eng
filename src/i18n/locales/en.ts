@@ -9,23 +9,23 @@ export default {
   },
   hero: {
     title: 'Salvador García',
-    subtitle: 'Software Development Engineer',
-    description: 'Full Stack Developer with 3 years of experience in Vue.js, Angular, NestJS, and Spring Boot. Specialized in micro-frontend architectures, microservices, and SPAs, with the ability to excel in both frontend and backend.',
+    subtitle: 'PHP/Laravel, NestJS & Modern Frontend Specialist (React, Vue, Angular)',
+    description: 'Software Engineer with 5 years of solid experience developing scalable, high-traffic enterprise applications. Backend specialist in PHP (Laravel) and NestJS, as well as modern frontend using React, Vue 2/3, and Angular 17/18.',
     viewProjects: 'View Projects',
     contactMe: 'Contact Me'
   },
   about: {
     title: 'About Me',
-    description1: 'Full Stack Developer with 3 years of experience in Vue.js, Angular, NestJS, Spring Boot, and multiple frontend and backend technologies. Specialized in improving various systems through micro-frontend architectures, microservices, or SPAs.',
-    description2: 'Experience in deployment processes using GitHub Actions or AWS, improving team code quality through meticulous pull request reviews. Seeking positions that allow me to leverage my collaborative problem-solving skills and agile methodologies to create efficient user experiences and robust backend systems.',
-    description3: 'I specialize in creating modular, maintainable, and scalable systems, working effectively in cross-functional teams and quickly adapting to new projects and codebases.',
+    description1: 'Software Engineer with 5 years of solid experience developing scalable, high-traffic enterprise applications. Backend specialist in PHP (Laravel) and NestJS, as well as modern frontend using HTML5, CSS3, JavaScript (ES6+), TypeScript, and frameworks like React, Vue 2/3, and Angular 17/18.',
+    description2: 'Extensive experience applying Object-Oriented Programming (OOP), Design Patterns, Clean Architecture, and SOLID and KISS principles. Expert in designing and implementing RESTful and GraphQL APIs, automated testing (TDD), SQL database optimization, and automated cloud deployments with AWS.',
+    description3: 'Specialized in micro-frontend architectures (Module Federation), microservices, and SPA applications. Experience in Salesforce integration, data synchronization between enterprise platforms, and process automation.',
     yearsExperience: 'Years of Experience',
     projectsCompleted: 'Projects Completed',
     technologies: 'Technologies Mastered'
   },
   experience: {
     title: 'Professional Experience',
-    subtitle: '3 years of experience in Full Stack development',
+    subtitle: '5 years of experience in Full Stack development',
     remote: 'Remote'
   },
   education: {
@@ -64,7 +64,7 @@ export default {
     locationValue: 'Mérida, Yucatán, Mexico'
   },
   footer: {
-    description: 'Software Development Engineer with 3 years of experience in Full Stack development, specialized in Vue.js, Angular, NestJS, Spring Boot, and modern architectures.',
+    description: 'Software Engineer with 5 years of experience in Full Stack development, specialized in PHP/Laravel, NestJS, React, Vue, Angular, and modern architectures.',
     quickLinks: 'Quick Links',
     followMe: 'Follow Me',
     rights: 'All rights reserved.'
