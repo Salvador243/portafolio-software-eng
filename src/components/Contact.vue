@@ -8,7 +8,7 @@ const { t } = useI18n()
 <template>
   <section id="contact" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-4xl font-bold text-gray-900 mb-4 text-center">{{ t('contact.title') }}</h2>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4 text-center">{{ t('contact.title') }}</h2>
       <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
         {{ t('contact.subtitle') }}
       </p>
@@ -23,8 +23,8 @@ const { t } = useI18n()
             </div>
 
             <div class="space-y-4">
-              <a href="mailto:salvador243gm@gmail.com" 
-                 class="flex items-center gap-4 p-4 bg-white rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
+              <a href="mailto:salvador243gm@gmail.com"
+                 class="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-gray-300 hover:shadow-sm hover:-translate-y-0.5 transition-all">
                 <div class="p-3 bg-gray-100 rounded-lg">
                   <Mail class="w-6 h-6 text-gray-700" />
                 </div>
@@ -34,8 +34,8 @@ const { t } = useI18n()
                 </div>
               </a>
 
-              <a href="https://github.com/Salvador243" target="_blank"
-                 class="flex items-center gap-4 p-4 bg-white rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
+              <a href="https://github.com/Salvador243" target="_blank" rel="noopener noreferrer"
+                 class="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-gray-300 hover:shadow-sm hover:-translate-y-0.5 transition-all">
                 <div class="p-3 bg-gray-100 rounded-lg">
                   <Github class="w-6 h-6 text-gray-700" />
                 </div>
@@ -45,8 +45,8 @@ const { t } = useI18n()
                 </div>
               </a>
 
-              <a href="https://www.linkedin.com/in/dev-salvador/" target="_blank"
-                 class="flex items-center gap-4 p-4 bg-white rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
+              <a href="https://www.linkedin.com/in/dev-salvador/" target="_blank" rel="noopener noreferrer"
+                 class="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-gray-300 hover:shadow-sm hover:-translate-y-0.5 transition-all">
                 <div class="p-3 bg-gray-100 rounded-lg">
                   <Linkedin class="w-6 h-6 text-gray-700" />
                 </div>
@@ -56,7 +56,7 @@ const { t } = useI18n()
                 </div>
               </a>
 
-              <div class="flex items-center gap-4 p-4 bg-white rounded-lg border border-gray-200">
+              <div class="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200">
                 <div class="p-3 bg-gray-100 rounded-lg">
                   <MapPin class="w-6 h-6 text-gray-700" />
                 </div>

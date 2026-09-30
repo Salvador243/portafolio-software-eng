@@ -12,11 +12,11 @@ const currentEducation = computed(() => education[locale.value as 'es' | 'en'])
 <template>
   <section id="education" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">{{ t('education.title') }}</h2>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-12 text-center">{{ t('education.title') }}</h2>
       
       <div class="max-w-4xl mx-auto">
         <div v-for="(edu, index) in currentEducation" :key="index"
-             class="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
+             class="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-gray-200">
           <div class="flex items-start gap-4">
             <div class="p-3 bg-gray-900 rounded-lg">
               <GraduationCap class="w-6 h-6 text-white" />

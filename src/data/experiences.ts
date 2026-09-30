@@ -1,100 +1,146 @@
-export const experiences = {
+export interface Experience {
+  title: string
+  company: string
+  period: string
+  location: string
+  responsibilities: string[]
+  tags: string[]
+  current?: boolean
+}
+
+export const experiences: Record<'es' | 'en', Experience[]> = {
   es: [
     {
-      title: 'Full Stack Developer',
-      company: 'certeroestudio.com',
-      period: 'Septiembre 2023 - Presente',
+      title: 'Desarrollador Técnico Salesforce',
+      company: 'Cliente de Servicios Financieros (Confidencial)',
+      period: 'Enero 2026 - Presente',
       location: 'Remoto',
+      current: true,
       responsibilities: [
-        'Colaboración con múltiples equipos en el desarrollo, implementación y mantenimiento de soluciones web escalables, con un fuerte enfoque en rendimiento y modularidad.',
-        'Desarrollo con tecnologías principales como TypeScript, Vue.js y Angular en el frontend, y NestJS, Spring Boot y Laravel en el backend.',
-        'Especialización en el diseño y evolución de arquitecturas basadas en micro-frontends (utilizando Module Federation), microservicios y aplicaciones SPA.',
-        'Integración de Salesforce a través de middleware para la sincronización de datos y automatización de procesos entre plataformas empresariales y servicios internos.',
-        'Estructuración de soluciones orientadas a la mantenibilidad y escalabilidad, implementando las mejores prácticas de programación.'
-      ]
+        'Desarrollo y mantenimiento de soluciones Salesforce con Lightning Web Components (LWC) y Apex, traduciendo requerimientos de negocio a implementaciones nativas de la plataforma.',
+        'Creación y edición de OmniScripts y Data Mappers (OmniStudio) para procesos de negocio guiados e interacciones basadas en datos.',
+        'Automatización y configuración con Flows, List Views y Object Manager para la gestión de registros, configuración de UI y administración a nivel de objeto.',
+        'Modelado de datos: diseño y evolución del modelo de datos (objetos estándar y personalizados, campos y relaciones) respetando las dependencias de configuración de la plataforma.',
+        'Pruebas unitarias de clases Apex y mantenimiento de la cobertura de tests requerida para despliegues, garantizando la calidad del código antes de cada entrega.',
+        'Gobernanza de datos: aplicación de prácticas de data governance de Salesforce en un entorno regulado de servicios financieros.'
+      ],
+      tags: ['LWC', 'Apex', 'OmniStudio', 'OmniScripts', 'Data Mappers', 'Flows', 'Object Manager', 'Apex Testing', 'Data Modeling']
+    },
+    {
+      title: 'Front-end Developer',
+      company: 'The Palace Company',
+      period: 'Septiembre 2024 - Octubre 2025',
+      location: 'Mérida, Yucatán',
+      responsibilities: [
+        'Diseño de un ecosistema modular de micro-frontends con Vue 2/3 y Vite, implementando Vite Federation para carga de módulos en runtime y Vue Router para navegación entre aplicaciones distribuidas.',
+        'Arquitectura de capas de estado global con Pinia y patrones de Composition API, gestionando sincronización de datos en tiempo real y reduciendo la huella de memoria del cliente.',
+        'Desarrollo de interfaces de alta fidelidad con PrimeVue y utilidades propias de Composition API. Integración de GraphQL vía Apollo Client con caché avanzado y políticas de UI optimista.',
+        'Aseguramiento de calidad con 100% de cobertura de lógica usando Vitest y pruebas E2E con Playwright en pipelines CI/CD de GitHub Actions.'
+      ],
+      tags: ['Vue 2/3', 'Vite Federation', 'Pinia', 'PrimeVue', 'GraphQL', 'Apollo', 'Vitest', 'Playwright']
     },
     {
       title: 'Full Stack Developer',
       company: 'CreSer Sin Fronteras',
-      period: 'Marzo 2022 - Agosto 2023',
+      period: 'Marzo 2023 - Agosto 2024',
       location: 'CDMX',
       responsibilities: [
-        'Liderazgo de la ingeniería backend con PHP 8 y Laravel para el desarrollo de APIs RESTful escalables.',
-        'Optimización de consultas SQL y uso avanzado de Eloquent ORM, logrando una reducción del 50% en la carga operativa.',
-        'Desarrollo de paneles administrativos utilizando HTML, CSS, JavaScript y Vue.',
-        'Integración de plataformas externas como WordPress y Moodle bajo arquitecturas MVC y gestión de almacenamiento en la nube con AWS S3.',
-        'Implementación de middlewares, control de acceso y mecanismos de seguridad en bases de datos MySQL 8.'
-      ]
+        'Ingeniería de un ecosistema Laravel 10 aplicando Domain-Driven Design: capas de servicio, repositorios y value objects para desacoplar las reglas de negocio de la persistencia.',
+        'Optimización de esquemas MySQL complejos, reduciendo la latencia de consultas un 60% mediante indexación personalizada, profiling y caché con Redis.',
+        'Desarrollo de un motor de reportes de alto rendimiento para generación masiva de PDF/Excel con Laravel Queues y Redis de forma asíncrona.',
+        'Gestión de almacenamiento escalable en AWS S3 y despliegues automatizados en Elastic Beanstalk.'
+      ],
+      tags: ['Laravel 10', 'PHP 8', 'DDD', 'MySQL', 'Redis', 'AWS S3', 'Elastic Beanstalk']
     },
     {
-      title: 'Full Stack Developer Jr (Hibrido)',
+      title: 'Full Stack Developer Jr',
       company: 'Datahome',
-      period: 'Abril 2021 - Febrero 2022',
+      period: 'Septiembre 2022 - Febrero 2023',
       location: 'Villahermosa',
       responsibilities: [
-        'Desarrollo de módulos críticos de Contabilidad y Finanzas.',
-        'Desarrollo backend en Python con bases de datos PostgreSQL, implementando lógica de negocio orientada a objetos.',
-        'Optimización de algoritmos y mantenimiento de código limpio siguiendo los principios KISS y SOLID.'
-      ]
+        'Modernización de módulos financieros legacy, gestionando migraciones de Python 2.7 a 3.10.',
+        'Implementación de triggers y funciones personalizadas en PostgreSQL para automatizar bitácoras de auditoría e integridad de datos.',
+        'Refactorización de código monolítico hacia arquitecturas modulares con principios SOLID, mejorando la eficiencia de algoritmos para cálculos financieros complejos.'
+      ],
+      tags: ['Python', 'PostgreSQL', 'SOLID', 'Migraciones']
     },
     {
-      title: 'Full Stack Developer Jr (Remoto)',
+      title: 'Full Stack Developer Jr',
       company: 'SIAC WEB',
-      period: 'Abril 2021 - Septiembre 2021',
+      period: 'Mayo 2022 - Agosto 2022',
       location: 'CDMX',
       responsibilities: [
-        'Implementación del sistema de facturación CFDI 4.0 y módulos de Recursos Humanos utilizando Python (Flask).',
-        'Desarrollo de lógica frontend dinámica con jQuery y Vanilla JavaScript en entornos ágiles.'
-      ]
+        'Desarrollo de microservicios de facturación CFDI 4.0 con Python (Flask): parsing seguro de XML, transformaciones XSLT e integración de firma digital con el SAT.',
+        'Construcción de dashboards interactivos de Recursos Humanos con Vanilla JS y jQuery, garantizando compatibilidad cross-browser y manipulación optimizada del DOM.'
+      ],
+      tags: ['Python', 'Flask', 'CFDI 4.0', 'XML/XSLT', 'JavaScript', 'jQuery']
     }
   ],
   en: [
     {
-      title: 'Full Stack Developer',
-      company: 'certeroestudio.com',
-      period: 'September 2023 - Present',
+      title: 'Technical Salesforce Developer',
+      company: 'Financial Services Client (Confidential)',
+      period: 'January 2026 - Present',
       location: 'Remote',
+      current: true,
       responsibilities: [
-        'Collaboration with multiple teams in the development, implementation, and maintenance of scalable web solutions, with a strong focus on performance and modularity.',
-        'Development with core technologies such as TypeScript, Vue.js, and Angular on the frontend, and NestJS, Spring Boot, and Laravel on the backend.',
-        'Specialization in the design and evolution of micro-frontend-based architectures (using Module Federation), microservices, and SPA applications.',
-        'Salesforce integration through middleware for data synchronization and process automation between enterprise platforms and internal services.',
-        'Structuring solutions oriented towards maintainability and scalability, implementing programming best practices.'
-      ]
+        'Build and maintain Salesforce solutions using Lightning Web Components (LWC) and Apex, translating business requirements into platform-native implementations.',
+        'Create and edit OmniScripts and Data Mappers (OmniStudio) to support guided business processes and data-driven interactions.',
+        'Automation and configuration with Flows, List Views and Object Manager for record management, UI configuration and object-level administration.',
+        'Data modeling: design and evolution of the data model (standard and custom objects, fields and relationships) respecting platform configuration dependencies.',
+        'Unit testing for Apex classes and maintenance of the test coverage required for deployments, ensuring code quality before every delivery.',
+        'Data governance: applying Salesforce data governance practices within a regulated financial services environment.'
+      ],
+      tags: ['LWC', 'Apex', 'OmniStudio', 'OmniScripts', 'Data Mappers', 'Flows', 'Object Manager', 'Apex Testing', 'Data Modeling']
+    },
+    {
+      title: 'Front-end Developer',
+      company: 'The Palace Company',
+      period: 'September 2024 - October 2025',
+      location: 'Mérida, Mexico',
+      responsibilities: [
+        'Designed a modular micro-frontend ecosystem using Vue 2/3 and Vite, implementing Vite Federation for runtime module loading and Vue Router for complex navigation across distributed micro-apps.',
+        'Architected global state layers using Pinia with composition patterns, managing real-time data synchronicity and reducing client-side memory footprint.',
+        'Developed high-fidelity interfaces using PrimeVue and custom Composition API utilities. Integrated GraphQL via Apollo Client with advanced caching and optimistic UI policies.',
+        'Enforced 100% logic coverage using Vitest and Playwright for E2E testing within automated GitHub Actions CI/CD pipelines.'
+      ],
+      tags: ['Vue 2/3', 'Vite Federation', 'Pinia', 'PrimeVue', 'GraphQL', 'Apollo', 'Vitest', 'Playwright']
     },
     {
       title: 'Full Stack Developer',
       company: 'CreSer Sin Fronteras',
-      period: 'March 2022 - August 2023',
+      period: 'March 2023 - August 2024',
       location: 'CDMX',
       responsibilities: [
-        'Backend engineering leadership with PHP 8 and Laravel for developing scalable RESTful APIs.',
-        'SQL query optimization and advanced use of Eloquent ORM, achieving a 50% reduction in operational load.',
-        'Development of administrative panels using HTML, CSS, JavaScript, and Vue.',
-        'Integration of external platforms such as WordPress and Moodle under MVC architectures and cloud storage management with AWS S3.',
-        'Implementation of middlewares, access control, and security mechanisms in MySQL 8 databases.'
-      ]
+        'Engineered a robust Laravel 10 ecosystem applying Domain-Driven Design: service layers, repositories and value objects to decouple business rules from framework persistence.',
+        'Optimized complex MySQL schemas, reducing query latency by 60% through custom indexing, query profiling and Redis caching.',
+        'Developed a high-performance reporting engine for mass PDF/Excel generation using asynchronous Laravel Queues and Redis.',
+        'Managed scalable file storage on AWS S3 and automated deployments on Elastic Beanstalk.'
+      ],
+      tags: ['Laravel 10', 'PHP 8', 'DDD', 'MySQL', 'Redis', 'AWS S3', 'Elastic Beanstalk']
     },
     {
-      title: 'Full Stack Developer Jr (Hybrid)',
+      title: 'Full Stack Developer Jr',
       company: 'Datahome',
-      period: 'April 2021 - February 2022',
+      period: 'September 2022 - February 2023',
       location: 'Villahermosa',
       responsibilities: [
-        'Development of critical Accounting and Finance modules.',
-        'Backend development in Python with PostgreSQL databases, implementing object-oriented business logic.',
-        'Algorithm optimization and clean code maintenance following KISS and SOLID principles.'
-      ]
+        'Led the modernization of legacy financial modules, managing Python 2.7 to 3.10 migrations.',
+        'Implemented custom PostgreSQL triggers and functions to automate audit logging and data integrity checks.',
+        'Refactored monolithic codebases into modular architectures using SOLID principles, enhancing algorithm efficiency for complex financial calculations.'
+      ],
+      tags: ['Python', 'PostgreSQL', 'SOLID', 'Migrations']
     },
     {
-      title: 'Full Stack Developer Jr (Remote)',
+      title: 'Full Stack Developer Jr',
       company: 'SIAC WEB',
-      period: 'April 2021 - September 2021',
+      period: 'May 2022 - August 2022',
       location: 'CDMX',
       responsibilities: [
-        'Implementation of CFDI 4.0 billing system and Human Resources modules using Python (Flask).',
-        'Development of dynamic frontend logic with jQuery and Vanilla JavaScript in agile environments.'
-      ]
+        'Developed CFDI 4.0 invoicing microservices using Python (Flask): secure XML parsing, XSLT transformations and digital signature integration with SAT authorities.',
+        'Crafted interactive HR dashboards using Vanilla JS and jQuery, ensuring cross-browser compatibility and optimized DOM manipulation.'
+      ],
+      tags: ['Python', 'Flask', 'CFDI 4.0', 'XML/XSLT', 'JavaScript', 'jQuery']
     }
   ]
 }
